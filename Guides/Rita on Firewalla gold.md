@@ -26,6 +26,6 @@ it important we import the logs rolling to get progressively
 ```Bash
 crontab -e
 #Add the following code to cron to import every hour
-0 * * * * /usr/local/bin/rita import --rolling /log/blog/current$(date --date='-1 hour' +\%Y-\%m-\%d)/ Firewalla_logs
+0 * * * * /usr/local/bin/rita import --rolling /log/blog/$(date --date='-1 hour' +\%Y-\%m-\%d)/ Firewalla_logs
 
 ```
